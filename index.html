@@ -3,16 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>한국몰드</title>
-  <style>
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; font-family: system-ui, sans-serif; background: #f7f7f8; color: #222; }
-    main { text-align: center; padding: 16px; }
-  </style>
+  <title>한국몰드 AI 오피스</title>
+  <meta name="description" content="한국몰드 AI 직원들이 일하는 픽셀아트 가상 사무실">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <h1>한국몰드</h1>
-    <p>프로젝트 준비 중입니다.</p>
+  <header class="top">
+    <div class="brand">
+      <span class="logo" aria-hidden="true"></span>
+      <div>
+        <h1>한국몰드 AI 오피스</h1>
+        <p>AI 직원을 클릭해서 대화하거나 업무를 맡겨 보세요</p>
+      </div>
+    </div>
+    <div class="meta">
+      <span id="mode" class="badge">연결 중…</span>
+      <span id="clock" class="clock"></span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="stage" aria-label="사무실">
+      <div class="office-wrap">
+        <canvas id="office" width="320" height="200"></canvas>
+        <div id="tags" class="tags"></div>
+      </div>
+      <p class="hint">AI 응답은 데모용 정해진 문장이에요. 실제 AI 모델은 아직 연결되지 않았어요.</p>
+    </section>
+    <aside class="panel" id="panel" aria-live="polite"></aside>
   </main>
+
+  <script type="module" src="app.js"></script>
 </body>
 </html>
